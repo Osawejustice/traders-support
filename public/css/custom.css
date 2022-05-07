@@ -1,0 +1,75 @@
+/*==================================================================================
+    Custom Stylesheet (Any custom styling you want to apply should be defined here).
+====================================================================================*/
+
+.main-header.sticky {
+    background: #00233F !important;
+}
+
+.main-header.sticky .header-menu>ul>li>a {
+    color: #BDC3C8;
+}
+
+.home1-vs1-bg {
+    background: #002C4D;
+    background: -webkit-linear-gradient(left, #002C4D 0, #012B48 100%);
+    background: linear-gradient(to right, #002C4D 0, #012B48 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#002C4D', endColorstr='#012B48', GradientType=1);
+}
+
+.main-header.sticky .signup--out-btn a {
+    background: #002C4D;
+    color: #fff;
+}
+
+.signup--out-btn .s-in{
+    background: #fff;
+    padding: 10px 29px;
+    border-radius: 5px;
+    font-family: Dosis,sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #0e035c;
+    position: relative;
+}
+
+.main-header.sticky .signup--out-btn .s-in {
+    background: #fff;
+    color: #0e035c;
+}
+
+.banner.home-banner1 {
+    padding: 80px 0 113px;
+}
+.footer-social-area{
+    margin-bottom: 24px;
+}
+.footer-social-list {
+    position: relative;
+    margin-bottom: 0;
+    z-index: 1;
+}
+.footer-social-list li {
+    display: inline-block;
+    background: #fff;
+    margin-right: 11px;
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 50%;
+    -webkit-transition: .3s all linear;
+    transition: .3s all linear;
+}
+footer.footer-type1 {
+    background: #002C4D;
+    background: -webkit-linear-gradient(top,#002C4D 0,#012B48 100%);
+    background: linear-gradient(to bottom,#002C4D 0,#012B48 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002C4D', endColorstr='#012B48', GradientType=0 );
+}
+
+@media (max-width: 768.98px) {
+  .hide-o{
+      display: none;
+  }
+}
