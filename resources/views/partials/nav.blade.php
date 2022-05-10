@@ -35,20 +35,33 @@
                                            </li>
                                            <li><a href="#">FAQ</a></li>
                                            <li><a href="contact.html">Contact</a></li>
+                                           <li>
+                                               <a href="javascript:void(0)" class="mb-1">
+                                                   <div id="google_translate_element"></div>
+                                               </a>
+                                           </li>
                                        </ul>
                                    </div>
                                </nav>
                            </div>
                        </div>
-                       <div class="signup--out-btn text-right hide-o" data-animate="fadeInUp" data-delay="1">
-                           <a href="{{ route('login') }}" class="waves-effect mr-4 s-in"><i
-                                   class="fa fa-sign-in d-none" aria-hidden="true"></i><span class="d-block">Sign
-                                   In</span>
-                           </a>
 
-                           <a href="{{ route('register') }}" class="waves-effect"><i class="fa fa-sign-in d-none"
-                                   aria-hidden="true"></i><span class="d-block">Sign Up</span>
-                           </a>
+                       <div class="signup--out-btn text-right hide-o" data-animate="fadeInUp" data-delay="1">
+                           @auth
+                               <a href="{{ route('user.dashboard') }}" class="waves-effect"><i
+                                       class="fa fa-sign-in d-none" aria-hidden="true"></i><span
+                                       class="d-block">Dashboard</span>
+                               </a>
+                           @endauth
+                           @guest
+                               <a href="{{ route('login') }}" class="waves-effect mr-4 s-in"><i
+                                       class="fa fa-sign-in d-none" aria-hidden="true"></i><span class="d-block">Sign
+                                       In</span>
+                               </a>
+                               <a href="{{ route('register') }}" class="waves-effect"><i class="fa fa-sign-in d-none"
+                                       aria-hidden="true"></i><span class="d-block">Sign Up</span>
+                               </a>
+                           @endguest
                        </div>
                    </div>
                </div>

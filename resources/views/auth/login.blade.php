@@ -41,7 +41,7 @@
                                 @enderror
                             </div>
                             <div class="mb-3">
-                                <button class="btn">LOGIN</button>
+                                <button class="btn btn-blue">LOGIN</button>
                             </div>
                         </form>
                     </div>

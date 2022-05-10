@@ -17,9 +17,9 @@ class RegisterController extends Controller
      */
     public function showRegistrationForm(Request $request)
     {
-        // if ($request->has('ref')) {
-        //     session(['referrer' => $request->query('ref')]);
-        // }
+        if ($request->has('ref')) {
+            session(['referrer' => $request->query('ref')]);
+        }
 
         return view('auth.signup');
     }
@@ -36,8 +36,6 @@ class RegisterController extends Controller
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput();
         }
-
-        
 
         $data = $validator->validated();
 

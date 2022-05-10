@@ -21,12 +21,37 @@
     background: #002C4D;
     color: #fff;
 }
+.btn{
+    z-index: inherit;
+    box-shadow: none;
+}
+.btn-no-border{
+    border: none !important;
+}
+.btn-blue{
+    background-color: #31969b;
+    border-color: #31969b;
+    /* color: #002C4D; */
+}
+.btn:before {
+    /* content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0; */
+    background: transparent;
+    /* z-index: -1;
+    width: 100%;
+    border-radius: 5px;
+    -webkit-transition: .2s all linear;
+    transition: .2s all linear; */
+}
 
-.signup--out-btn .s-in{
+.signup--out-btn .s-in {
     background: #fff;
     padding: 10px 29px;
     border-radius: 5px;
-    font-family: Dosis,sans-serif;
+    font-family: Dosis, sans-serif;
     font-size: 15px;
     font-weight: 600;
     color: #0e035c;
@@ -38,17 +63,25 @@
     color: #0e035c;
 }
 
+.home1-section-bg1 {
+    background: #012B48;
+
+}
+
 .banner.home-banner1 {
     padding: 80px 0 113px;
 }
-.footer-social-area{
+
+.footer-social-area {
     margin-bottom: 24px;
 }
+
 .footer-social-list {
     position: relative;
     margin-bottom: 0;
     z-index: 1;
 }
+
 .footer-social-list li {
     display: inline-block;
     background: #fff;
@@ -61,15 +94,19 @@
     -webkit-transition: .3s all linear;
     transition: .3s all linear;
 }
+
 footer.footer-type1 {
     background: #002C4D;
-    background: -webkit-linear-gradient(top,#002C4D 0,#012B48 100%);
-    background: linear-gradient(to bottom,#002C4D 0,#012B48 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002C4D', endColorstr='#012B48', GradientType=0 );
+    background: -webkit-linear-gradient(top, #002C4D 0, #012B48 100%);
+    background: linear-gradient(to bottom, #002C4D 0, #012B48 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#002C4D', endColorstr='#012B48', GradientType=0);
 }
 
 @media (max-width: 768.98px) {
-  .hide-o{
-      display: none;
-  }
+    .hide-o {
+        display: none;
+    }
+    .hide-sm{
+        display: none !important;
+    }
 }

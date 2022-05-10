@@ -26,9 +26,8 @@
                             <p data-animate="fadeInUp" data-delay=".4"> AS WE AWAIT YOU WITH
                                 OUR FUNDS
                                 IN THE MARKET PLACE ...</p>
-                            <a href="#" class="btn waves-effect mr-2" data-animate="fadeInUp" data-delay=".6">SYNTHETIC
-                                CONTEST</a>
-                            <a href="#" class="btn waves-effect" data-animate="fadeInUp" data-delay=".6">FOREX CONTEST</a>
+                            <a href="{{route('login')}}" class="btn waves-effect mr-2" data-animate="fadeInUp" data-delay=".6">SIGN IN</a>
+                            <a href="{{route('register')}}" class="btn waves-effect" data-animate="fadeInUp" data-delay=".6">SIGN UP</a>
                         </div>
                     </div>
                     <div class="col-lg-6 col-xl-6 offset-xl-1 col-md-6" style="padding-top: 100px">
@@ -199,6 +198,90 @@
     </section>
     <section class="pt-140 pb-80 crypto-patern">
         <div class="container">
+            {{-- <div class="row justify-content-center">
+                <div class="col-xl-12 col-lg-8">
+                    <div class="section-title text-center mb-30"> <img src="img/icons/balb.svg" alt=""
+                            class="svg">
+                        <h2>PROGRAM BENEFITS</h2>
+                        <h2>(Earn as a
+                            Professional
+                            Trader)</h2>
+                    </div>
+                </div>
+            </div> --}}
+            <div class="service-wrap">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="single--service-inner">
+                            {{-- <div class="single--service-icon"> <img src="img/icons/service-icon1.png" alt="">
+                                <div class="underline-wrap">
+                                    <div class="unerline"> <span></span> <span></span> <span></span> </div>
+                                </div>
+                            </div> --}}
+                            <div class="single-service-text">
+                                <h3  class="py-1 text-white">SYNTHETIC ( DERIV ) DEMO
+                                    TRADING COMPETITION</h3>
+                                <ul>
+                                    <li>Enter the competition with $10 fee</li>
+                                    <li>Win $250 - $2500 trading account</li>
+                                    <li>Ten (10) lucky winners will emerge monthly
+                                    </li>
+                                </ul>
+                                <div class="px-2 bg-primary text-light">
+                                    <h5 class="py-1 text-white">SYNTHETIC FUNDED ACCOUNTS</h5>
+                                </div>
+                                <h4 class="text-white mt-4">$25 - $250 </h4>
+                                <h4 class="text-white"> $50 - $500</h4>
+                                <h4 class="text-white"> $100 - $1000</h4>
+                                <h4 class="text-white"> $250 - $2500</h4>
+                                <h4 class="text-white"> $500 - $5000</h4>
+                                <h4 class="text-white"> $1,000 - $10,000</h4>
+                                <h4 class="text-white"> $2,500 - $25,000</h4>
+                                <h4 class="text-white"> $5,000 - $50,000</h4>
+                                {{-- <p>Learn about support & resistance,
+                                    risk management and more.
+                                    Graduate to the semi-professional
+                                    status (COMING SOON)
+                                </p> --}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="single--service-inner">
+                            {{-- <div class="single--service-icon"> <img src="img/icons/service-icon2.png" alt="">
+                                <div class="underline-wrap">
+                                    <div class="unerline"> <span></span> <span></span> <span></span> </div>
+                                </div>
+                            </div> --}}
+                            <div class="single-service-text">
+                                <h3 class="text-white">FOREX DEMO
+                                    TRADING COMPETITION
+                                </h3>
+                                <ul>
+                                    <li>Enter the competition with $10 fee</li>
+                                    <li>Win $10000 - $100000 t trading account</li>
+                                    <li>Ten (10) lucky winners will emerge monthly
+                                    </li>
+                                </ul>
+                                <div class="px-2 bg-primary text-light">
+                                    <h5 class="py-1 text-white">FOREX FUNDED ACCOUNTS</h5>
+                                </div>
+                                <h4 class="text-white mt-4">$75 - $5000 </h4>
+                                <h4 class="text-white"> $99 - $10,000</h4>
+                                <h4 class="text-white"> $200 - $25,000</h4>
+                                <h4 class="text-white"> $350 - $50,000</h4>
+                                <h4 class="text-white"> $500 - $100,000</h4>
+                                <h4 class="text-white"> $950 - $200,000</h4>
+                                <h4 class="text-white"> $1,100 - $250,000</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pb-80 crypto-patern">
+        <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-12 col-lg-8">
                     <div class="section-title text-center mb-30"> <img src="img/icons/balb.svg" alt=""
@@ -306,7 +389,7 @@
             </div>
         </div>
     </section>
-    <section class="pt-140 pb-110 crypto-patern home1-section-bg">
+    <section class="pt-140 crypto-patern home1-section-bg1">
 
         <div class="container">
             <div class="row justify-content-center">
@@ -317,16 +400,29 @@
                     </div>
                 </div>
             </div>
-            <div style="display:flex; justify-content:space-between; align-items:center">
+            <div style="display:flex; justify-content:space-between; align-items:center" class="hide-sm">
                 <img src="{{ asset('img/bull.png') }}" alt="" style="width: 120px">
                 <div style="background: #fff; width: 200px; height: 2px"></div>
-                {{-- <hr style="background: #fff" /> --}}
                 <img src="{{ asset('img/bull.png') }}" alt="" style="width: 120px">
-                {{-- <hr style="background: #fff" /> --}}
                 <div style="background: #fff; width: 200px; height: 2px"></div>
                 <img src="{{ asset('img/bull.png') }}" alt="" style="width: 120px">
             </div>
-            <div style="display:flex; justify-content:space-between; align-items:center; margin-top: 50px;">
+            {{-- <div class="d-flex flex-md-row-reverse justify-content-between">
+                <div class="4">
+                    <h2 style="color: #fff">40,000+</h2>
+                    <h4 style="color: #f8f8f8">Happy Traders</h4>
+                </div>
+                <div class="4">
+                    <h2 style="color: #fff">100,000,000,000+</h2>
+                    <h4 style="color: #f8f8f8">Trading Volume Monthly</h4>
+                </div>
+                <div class="4">
+                    <h2 style="color: #fff">120+</h2>
+                    <h4 style="color: #f8f8f8">Different Countries</h4>
+                </div>
+            </div> --}}
+            <div style="display:flex; justify-content:space-between; align-items:center; margin: 50px; 0px;"
+                class="hide-sm">
                 <div>
                     <h2 style="color: #fff">40,000+</h2>
                     <h4 style="color: #f8f8f8">Happy Traders</h4>
@@ -339,6 +435,19 @@
                     <h2 style="color: #fff">120+</h2>
                     <h4 style="color: #f8f8f8">Different Countries</h4>
                 </div>
+            </div>
+            <div class="row mt-20">
+                <div class="col-md-12 text-center">
+                    <img src="{{ asset('img/tsl_logo.png') }}" alt="TSF logo" style="width: 140px">
+
+                    <a href="{{ route('login') }}" class="btn btn-danger ml-4 btn-no-border">
+                        <span class="d-block">Start Now</span>
+                    </a>
+                </div>
+                {{-- <div class="col-md-6">
+                    <img src="{{asset('img/tsl_logo.png')}}" alt="TSF logo" style="width: 140px">
+
+                </div> --}}
             </div>
         </div>
     </section>

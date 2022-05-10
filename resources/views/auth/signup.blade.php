@@ -60,7 +60,7 @@
                                 @enderror --}}
                             </div>
                             <div class="mb-3">
-                                <button class="btn">Create account</button>
+                                <button class="btn btn-blue">Create account</button>
                             </div>
                         </form>
                     </div>
