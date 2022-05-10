@@ -40,12 +40,4 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/account/payment/verify', [DashboardController::class, 'verifyPayment']);
     Route::get('/account/plans', [UserController::class, 'accountPlans']);
     Route::get('/logout', [DashboardController::class, 'logout'])->name('user.logout');
-    // Route::group(['middleware' => ['auth', 'verified']], function () {
-    // Route::get('/account', [UserController::class, 'showAccount'])->name('account');
-    // Route::get('/account/order/{id}', [OrderController::class, 'showUserOrder'])->name('order');
-    // Route::post('/account/update', [UserController::class, 'userUpdate'])->name('updateProfile');
-    // Route::post('/account/password/update', [UserController::class, 'userPasswordUpdate'])->name('updatePassword');
-    // Route::get('checkout', [MainController::class, 'checkout'])->name('checkout');
-    // Route::post('/pay', [PaymentController::class, 'redirectToGateway'])->name('pay');
-    // Route::get('/payment/verify', [PaymentController::class, 'handleGatewayCallback']);
 });

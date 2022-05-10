@@ -108,7 +108,7 @@ class DashboardController extends Controller
             $dd = $response->json();
             // dd($data);
             if ($dd['status'] === 'success') {
-                $acc = AccountPlan::where('reference', $dd['data']['reference'])->update(['paid' => 1]);;
+                AccountPlan::where('reference', $dd['data']['reference'])->update(['paid' => 1]);
                 // $acc->paid = 1;
                 // $acc->save();
                 return redirect()->route('dashboard.sub')->with('success', 'Payment succcessful, subscription created');

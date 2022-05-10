@@ -20,9 +20,9 @@
                                 {{ $errMessage }}</h6>
                         @endif
                         @if ($sMessage = session()->get('login_success'))
-                        <h6 style="background-color: #e3f1e4; margin: 8px 0px; padding: 12px; color: #17a747">
-                            {{ $sMessage }}</h6>
-                    @endif
+                            <h6 style="background-color: #e3f1e4; margin: 8px 0px; padding: 12px; color: #17a747">
+                                {{ $sMessage }}</h6>
+                        @endif
                         <form action="{{ route('login.user') }}" method="POST">
                             @csrf
                             <div class="mb-3">
@@ -35,7 +35,8 @@
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label">Password</label>
-                                <input id="password" class="form-control" placeholder="Enter your password" name="password" type="password" />
+                                <input id="password" class="form-control" placeholder="Enter your password"
+                                    name="password" type="password" />
                                 @error('password')
                                     <h6 style="color: tomato; margin-top: 8px;">{{ $message }}</h6>
                                 @enderror
@@ -43,6 +44,7 @@
                             <div class="mb-3">
                                 <button class="btn btn-blue">LOGIN</button>
                             </div>
+                            <p>Don't have an account? <a style="color: white" href="{{ route('register') }}">Register here</a></p>
                         </form>
                     </div>
                 </div>

@@ -14,7 +14,7 @@
                     <div class="card bg-primary text-white mb-2">
                         <div class="card-body">Referral Commission</div>
                         <div class="card-footer d-flex align-items-center justify-content-between">
-                            <h6 class="text-white stretched-link pb-0"><small>USD</small> {{ $sum }}</h6>
+                            <h6 class="text-white stretched-link pb-0"><small>USD</small> {{ number_format($sum) }}</h6>
                             <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                         </div>
                     </div>

@@ -24,10 +24,10 @@
                                 WITH YOUR TRADING SKILLS
                             </h1>
                             <p data-animate="fadeInUp" data-delay=".4"> AS WE AWAIT YOU WITH
-                                OUR FUNDS
+                                PROPRIETARY FUNDS
                                 IN THE MARKET PLACE ...</p>
-                            <a href="{{route('login')}}" class="btn waves-effect mr-2" data-animate="fadeInUp" data-delay=".6">SIGN IN</a>
-                            <a href="{{route('register')}}" class="btn waves-effect" data-animate="fadeInUp" data-delay=".6">SIGN UP</a>
+                            {{-- <a href="{{route('login')}}" class="btn waves-effect mr-2" data-animate="fadeInUp" data-delay=".6">SIGN IN</a> --}}
+                            <a href="{{route('register')}}" class="btn waves-effect" data-animate="fadeInUp" data-delay=".6">GET STARTED</a>
                         </div>
                     </div>
                     <div class="col-lg-6 col-xl-6 offset-xl-1 col-md-6" style="padding-top: 100px">
@@ -532,7 +532,7 @@
             </div>
         </div>
     </section>
-    <section class="pt-140 pb-140 crypto-patern">
+    {{-- <section class="pt-140 pb-140 crypto-patern">
         <div class="app--full-width">
             <div class="app-overlay-bg d-lg-block d-none" data-bg-img="img/mobile-bg.png"></div>
             <div class="container">
@@ -611,5 +611,5 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 @endsection

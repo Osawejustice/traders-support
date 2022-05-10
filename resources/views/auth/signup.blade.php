@@ -47,14 +47,16 @@
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label">Password</label>
-                                <input id="password" class="form-control" placeholder="Enter your password" name="password" type="password" />
+                                <input id="password" class="form-control" placeholder="Enter your password"
+                                    name="password" type="password" />
                                 @error('password')
                                     <h6 style="color: tomato; margin-top: 8px;">{{ $message }}</h6>
                                 @enderror
                             </div>
                             <div class="mb-3">
                                 <label for="password_c" class="form-label">Password again</label>
-                                <input id="password_c" class="form-control" placeholder="Enter your password again" name="password_confirmation" type="password" />
+                                <input id="password_c" class="form-control" placeholder="Enter your password again"
+                                    name="password_confirmation" type="password" />
                                 {{-- @error('password')
                                     <h6 style="color: tomato; margin-top: 8px;">{{ $message }}</h6>
                                 @enderror --}}
@@ -62,6 +64,8 @@
                             <div class="mb-3">
                                 <button class="btn btn-blue">Create account</button>
                             </div>
+                            <p>Already have an account? <a style="color: white" href="{{ route('login') }}">Login here</a>
+                            </p>
                         </form>
                     </div>
                 </div>
