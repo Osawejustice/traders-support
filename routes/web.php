@@ -89,12 +89,17 @@ Route::post('/account/register', [RegisterController::class, 'createAccount'])->
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/dashboard', [DashboardController::class, 'showDashboard'])->name('user.dashboard');
     Route::get('/account', [UserController::class, 'showProfile'])->name('user.profile');
+    Route::post('/account/update', [UserController::class, 'updateProfile'])->name('user.update.profile');
+
     Route::get('/account/subscriptions', [DashboardController::class, 'showsubscriptions'])->name('dashboard.sub');
     Route::post('/account/sub', [DashboardController::class, 'payForsubscription']);
     Route::post('/account/payment/verify', [DashboardController::class, 'verifyPayment']);
     Route::get('/account/plans', [UserController::class, 'accountPlans']);
+
     Route::get('/account/referrals', [UserController::class, 'referrals']);
     Route::get('/account/withdrawals', [UserController::class, 'withdrawals']);
-    
+    Route::post('/account/withdrawals', [UserController::class, 'processWithdrawal']);
+
+
     Route::get('/logout', [DashboardController::class, 'logout'])->name('user.logout');
 });

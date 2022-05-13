@@ -41,6 +41,13 @@
                             <div class="item-profile">
                                 <p class="mb-0"
                                     style="color: #3f3f3f;font-size:14px;font-weight:bold;margin-bottom:0px;padding-bottom:0px;">
+                                    Wallet address (USDT)</p>
+                                <p class="mt-0">{{ $user->wallet_address ?? 'Nil' }}</p>
+                            </div>
+
+                            <div class="item-profile">
+                                <p class="mb-0"
+                                    style="color: #3f3f3f;font-size:14px;font-weight:bold;margin-bottom:0px;padding-bottom:0px;">
                                     Referral link</p>
                                 <p class="mt-0">{{ $user->referral_link }}</p>
                             </div>
@@ -55,20 +62,48 @@
                             Edit profile
                         </div>
                         <div class="card-body">
-                            <form action="" method="POST">
+                            @if ($errMessage = session()->get('error'))
+                                <h6 style="background-color: #f8d7da; margin: 8px 0px; padding: 12px; color: #721c24">
+                                    {{ $errMessage }}</h6>
+                            @endif
+                            @if ($sMessage = session()->get('success'))
+                                <h6 style="background-color: #e3f1e4; margin: 8px 0px; padding: 12px; color: #17a747">
+                                    {{ $sMessage }}</h6>
+                            @endif
+                            <form action="{{ route('user.update.profile') }}" method="POST">
+                                @csrf
                                 <div class="mb-2">
                                     <label for="name">Fullname</label>
-                                    <input type="text" placeholder="Enter your name" value="{{ $user->name }}" class="form-control">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="name">Username</label>
-                                    <input type="text" placeholder="Enter your username" value="{{ $user->username }}" class="form-control">
+                                    <input type="text" placeholder="Enter your name" name="name" value="{{ $user->name }}"
+                                        class="form-control">
+                                    @error('name')
+                                        <h6 style="color: tomato; margin-top: 8px;">{{ $message }}</h6>
+                                    @enderror
                                 </div>
 
                                 <div class="mb-3">
-                                    <button type="submit" class="btn btn-primary disabled">Update profile</button>
+                                    <label for="name">Username</label>
+                                    <input type="text" placeholder="Enter your username" value="{{ $user->username }}"
+                                        class="form-control" name="username">
+                                    @error('username')
+                                        <h6 style="color: tomato; margin-top: 8px;">{{ $message }}</h6>
+                                    @enderror
                                 </div>
-                                <hr/>
+
+                                <div class="mb-3">
+                                    <label for="name">Wallet address (USDT)</label>
+                                    <input type="text" placeholder="Enter your wallet address"
+                                        value="{{ $user->wallet_address }}" class="form-control" name="address">
+                                    @error('address')
+                                        <h6 style="color: tomato; margin-top: 8px;">
+                                            {{ Str::replaceFirst('address', 'wallet address', $message) }}</h6>
+                                    @enderror
+                                </div>
+
+                                <div class="mb-3">
+                                    <button type="submit" class="btn btn-primary">Update profile</button>
+                                </div>
+                                <hr />
                                 <div>
                                     <a href="">Update your password</a>
                                 </div>

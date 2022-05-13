@@ -39,7 +39,7 @@
                             <small>Total referral earnings</small>
                             {{-- <a class="small text-white stretched-link" href="#">View Details</a> --}}
                             <div class="small text-white" style="padding-bottom: 5px">
-                                <a href="{{ url('account/withdrwals') }}"
+                                <a href="{{ url('account/withdrawals') }}"
                                     style="color: white; font-weight: bold">Withdraw</a>
                                 {{-- <i class="fas fa-angle-right"></i> --}}
                             </div>
@@ -68,7 +68,7 @@
                             <strong>{{ $plans }}</strong>
                         </div>
                         <div class="card-footer d-flex align-items-center justify-content-between pt-2">
-                            <span>View your referral belows</span>
+                            <small>Your active subscriptions</small>
                             {{-- <a class="small text-white stretched-link" href="#">View Details</a> --}}
                             <div class="small text-white" style="padding-bottom: 5px">
                                 <a href="{{ url('account/plans') }}" style="color: white">View all</a>
