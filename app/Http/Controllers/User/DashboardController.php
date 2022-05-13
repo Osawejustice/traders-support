@@ -18,8 +18,9 @@ class DashboardController extends Controller
     {
         $user = Auth::user();
         $sum = Commission::where('user_id', $user->id)->sum('amount');
+        $plans = AccountPlan::where('user_id', $user->id)->get()->count();
         // dd($sum);
-        return view('user.dashboard', compact('user', 'sum'));
+        return view('user.dashboard', compact('user', 'sum', 'plans'));
     }
 
     public function showsubscriptions(Request $req)
@@ -42,16 +43,17 @@ class DashboardController extends Controller
                 // return redirect()->back()->withErrors($validator)->withInput();
             }
             $data = $validator->validated();
-
+            $lazerPayKey = env('LAZERPAY_PUBLIC_KEY');
             $user = Auth::user();
+
             $url = "https://api.lazerpay.engineering/api/v1/transaction/initialize";
             //send a request to refund endpoint
             $response = Http::withHeaders([
                 'content-type' => 'application/json',
-                'x-api-key' => "pk_test_rfLaQLr2DF7MhijkqeRiLksyFxGHCs8JBqvcpy3ftEGbq3YFTV"
+                'x-api-key' => $lazerPayKey
             ])->post($url, [
                 'customer_name' => $user->name, 'customer_email' => $user->email,
-                'coin' => "BUSD", 'currency' => "USD",
+                'coin' => "USDT", 'currency' => "USD",
                 'amount' => $data['plan_fee']
             ]);
             $result = $response->json();
@@ -96,14 +98,14 @@ class DashboardController extends Controller
                 // return redirect()->back()->withErrors($validator)->withInput();
             }
             $data = $validator->validated();
+            $lazerPayKey = env('LAZERPAY_PUBLIC_KEY');
 
             // $user = Auth::user();
             $url = "https://api.lazerpay.engineering/api/v1/transaction/verify/{$data['reference']}";
             // dd($url);
-            //send a request to refund endpoint
             $response = Http::withHeaders([
                 'content-type' => 'application/json',
-                'x-api-key' => "pk_test_rfLaQLr2DF7MhijkqeRiLksyFxGHCs8JBqvcpy3ftEGbq3YFTV"
+                'x-api-key' => $lazerPayKey
             ])->get($url);
             $dd = $response->json();
             // dd($data);
@@ -111,7 +113,7 @@ class DashboardController extends Controller
                 AccountPlan::where('reference', $dd['data']['reference'])->update(['paid' => 1]);
                 // $acc->paid = 1;
                 // $acc->save();
-                return redirect()->route('dashboard.sub')->with('success', 'Payment succcessful, subscription created');
+                return redirect()->route('dashboard.sub')->with('success', 'Subscription created, payment verification in progress');
             } else {
                 return redirect()->route('dashboard.sub')->with('error', $dd['message']);
             }

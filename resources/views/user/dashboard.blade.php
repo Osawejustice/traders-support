@@ -10,15 +10,17 @@
                 <li class="breadcrumb-item active">Dashboard Overview</li>
             </ol>
             <div class="row">
-                <div class="col-md-4">
+                {{-- <div class="col-md-4">
                     <div class="card bg-primary text-white mb-2">
                         <div class="card-body">Referral Commission</div>
                         <div class="card-footer d-flex align-items-center justify-content-between">
                             <h6 class="text-white stretched-link pb-0"><small>USD</small> {{ number_format($sum) }}</h6>
-                            <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                <div class="small text-white">
+                                <a href="ffff" style="color: wheat">Withdraw</a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
                 {{-- <div class="col-xl-3 col-md-6">
                 <div class="card bg-warning text-white mb-4">
                     <div class="card-body">Warning Card</div>
@@ -30,10 +32,47 @@
             </div> --}}
                 <div class="col-md-4">
                     <div class="card bg-success text-white mb-4">
-                        <div class="card-body pb-3">Referrals (<strong>{{ count($user->referrals) }}</strong>)</div>
+                        <div class="card-body pb-3">Referral Commission <br />
+                            <small>USD</small> <strong>{{ number_format($sum) }}</strong>
+                        </div>
                         <div class="card-footer d-flex align-items-center justify-content-between pt-2">
-                            <a class="small text-white stretched-link" href="#">View Details</a>
-                            <div class="small text-white" style="padding-bottom: 5px"><i class="fas fa-angle-right"></i>
+                            <small>Total referral earnings</small>
+                            {{-- <a class="small text-white stretched-link" href="#">View Details</a> --}}
+                            <div class="small text-white" style="padding-bottom: 5px">
+                                <a href="{{ url('account/withdrwals') }}"
+                                    style="color: white; font-weight: bold">Withdraw</a>
+                                {{-- <i class="fas fa-angle-right"></i> --}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card bg-primary text-white mb-4">
+                        <div class="card-body pb-3">Referrals <br /> <strong>{{ count($user->referrals) }}</strong>
+                        </div>
+                        <div class="card-footer d-flex align-items-center justify-content-between pt-2">
+                            <small>Your referral signees</small>
+                            {{-- <a class="small text-white stretched-link" href="#">View Details</a> --}}
+                            <div class="small text-white" style="padding-bottom: 5px">
+                                <a href="{{ url('account/referrals') }}" style="color: white">View all</a>
+                                {{-- <i class="fas fa-angle-right"></i> --}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card bg-secondary text-white mb-4">
+                        <div class="card-body pb-3">Active subscriptions <br />
+                            <strong>{{ $plans }}</strong>
+                        </div>
+                        <div class="card-footer d-flex align-items-center justify-content-between pt-2">
+                            <span>View your referral belows</span>
+                            {{-- <a class="small text-white stretched-link" href="#">View Details</a> --}}
+                            <div class="small text-white" style="padding-bottom: 5px">
+                                <a href="{{ url('account/plans') }}" style="color: white">View all</a>
+                                {{-- <i class="fas fa-angle-right"></i> --}}
                             </div>
                         </div>
                     </div>
@@ -92,7 +131,7 @@
                             </tr>
                         </tfoot>
                         <tbody>
-                            @foreach ($user->referrals->take(4) as $ref)
+                            @foreach ($user->referrals->take(8) as $ref)
                                 <tr>
                                     <td>{{ $ref->name }}</td>
                                     <td>{{ $ref->username }}</td>
