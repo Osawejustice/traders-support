@@ -16,4 +16,8 @@ class AccountPlan extends Model
         'user_id',
         'reference'
     ];
+    public function package()
+    {
+        return $this->belongsTo(Package::class, 'account_type', 'slug');
+    }
 }

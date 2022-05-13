@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\AccountPlan;
 use App\Models\Commission;
 use App\Models\FundedAccount;
+use App\Models\Package;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
@@ -25,7 +26,8 @@ class DashboardController extends Controller
 
     public function showsubscriptions(Request $req)
     {
-        $plans = FundedAccount::accounts;
+        // $plans = FundedAccount::accounts;
+        $plans = Package::get();
         return view('user.plans', compact('plans'));
     }
 

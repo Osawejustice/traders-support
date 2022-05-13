@@ -27,25 +27,25 @@
                     <div class="col-md-12">
                         <div class="card mb-4">
                             <div class="card-header">
-                                {{ $plan['name'] }}
+                                {{ Str::upper($plan->name) }}
                             </div>
                             <div class="card-body">
                                 <div class="row">
-                                    @foreach ($plan['subscriptions'] as $name => $subscription)
+                                    @foreach ($plan->subscriptions as $subscription)
                                         <div class="col-md-3 mt-2">
                                             <div class="card">
                                                 <div class="card-body">
                                                     <p>
                                                         One time payment for a
-                                                        <strong>${{ number_format($name) }}</strong> account
+                                                        <strong>${{ number_format($subscription->target) }}</strong> account
                                                     </p>
                                                     <form action="/account/sub" method="POST">
                                                         @csrf
-                                                        <input type="hidden" name="plan_type" value="{{ $plan['type'] }}">
-                                                        <input type="hidden" name="plan_name" value="{{ $name }}">
-                                                        <input type="hidden" name="plan_fee" value="{{ $subscription }}">
+                                                        <input type="hidden" name="plan_type" value="{{ $plan->slug }}">
+                                                        <input type="hidden" name="plan_name" value="{{ $subscription->target }}">
+                                                        <input type="hidden" name="plan_fee" value="{{ $subscription->amount }}">
                                                         <button class="btn btn-sm btn-secondary" type="submit">
-                                                            Pay ${{ number_format($subscription) }}
+                                                            Pay ${{ number_format($subscription->amount) }}
                                                         </button>
                                                     </form>
                                                 </div>

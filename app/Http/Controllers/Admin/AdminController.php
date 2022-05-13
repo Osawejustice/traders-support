@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\AccountPlan;
 use Illuminate\Support\Str;
 use App\Models\Commission;
 use App\Models\Package;
@@ -35,6 +36,20 @@ class AdminController extends Controller
         $users = User::get();
         return view('admin.users', compact('users'));
     }
+
+    public function userPlans(Request $request)
+    {
+        $user_id = $request->input('id');
+        if ($user_id) {
+            $user = User::findOrFail($user_id);
+            $plans = AccountPlan::where('user_id', $user->id)->get();
+            return view('admin.user_plans', compact('plans', 'user'));
+        } else {
+            return back();
+        }
+    }
+
+
 
     public function withdrawals(Request $request)
     {

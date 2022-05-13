@@ -20,14 +20,14 @@
                         @csrf
                         <div class="mb-3">
                             <label for="title" class="mb-1">Enter target amount</label>
-                            <input type="text" class="form-control" name="target" placeholder="Enter target amount" />
+                            <input type="number" class="form-control" name="target" placeholder="Enter target amount" />
                             @error('target')
                                 <h6 style="color: tomato; margin-top: 8px;">{{ $message }}</h6>
                             @enderror
                         </div>
                         <div class="mb-3">
                             <label for="title" class="mb-1">Enter price</label>
-                            <input type="text" class="form-control" name="price" placeholder="Enter price" />
+                            <input type="number" class="form-control" name="price" placeholder="Enter price" />
                             @error('price')
                                 <h6 style="color: tomato; margin-top: 8px;">{{ $message }}</h6>
                             @enderror
@@ -71,12 +71,12 @@
                                 <tbody>
                                     @foreach ($packagePlans as $packagePlan)
                                         <tr>
-                                            <td>{{ $packagePlan->target }}</td>
-                                            <td>{{ $packagePlan->amount }}</td>
+                                            <td>{{ number_format($packagePlan->target) }}</td>
+                                            <td>{{ number_format($packagePlan->amount) }}</td>
                                             <td>{{ date_format($packagePlan->created_at, 'Y/m/d') }}</td>
                                             <td>
                                                 <form action="{{ route('admin.package.delete') }}"
-                                                    style="display: inline;" method="POST">
+                                                    style="display: inline;" method="POST" onsubmit="return confirm('Do you want to delete?')">
                                                     @csrf
                                                     <input type="hidden" name="package_id" value="{{ $packagePlan->id }}">
                                                     <button type="submit" class=" btn btn-sm btn-danger">Delete</button>

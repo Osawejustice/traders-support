@@ -55,7 +55,7 @@ class UserController extends Controller
     {
         $user = Auth::user();
         $plans = AccountPlan::where('user_id', $user->id)->get();
-        // dd($plans);
+        // dd($plans->toArray());
         return view('user.account_plans', compact('plans'));
     }
 

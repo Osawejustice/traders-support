@@ -41,7 +41,10 @@
                                     <td>{{ $user->email }}</td>
                                     <td>{{ $user->username }}</td>
                                     <td>{{ date_format($user->created_at, 'Y/m/d') }}</td>
-                                    <td><a href="{{ url('/admin/user/' . $user->id) }}">View details</a></td>
+                                    <td><a class="btn btn-sm btn-primary" href="{{ url('/admin/user/' . $user->id) }}">View details</a>
+                                    <a class="btn btn-sm btn-success" href="{{ route('admin.user.plans', ['id' => $user->id]) }}">subscriptions</a>
+                                    </td>
+
                                 </tr>
                             @endforeach
                         </tbody>

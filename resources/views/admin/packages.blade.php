@@ -49,7 +49,7 @@
                                     <tr>
                                         <th>Name</th>
                                         <th>Slug</th>
-                                        <th>Created on</th>
+                                        {{-- <th>Created on</th> --}}
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
@@ -57,7 +57,7 @@
                                     <tr>
                                         <th>Name</th>
                                         <th>Slug</th>
-                                        <th>Created on</th>
+                                        {{-- <th>Created on</th> --}}
                                         <th>Actions</th>
                                     </tr>
                                 </tfoot>
@@ -66,12 +66,12 @@
                                         <tr>
                                             <td>{{ $package->name }}</td>
                                             <td>{{ $package->slug }}</td>
-                                            <td>{{ date_format($package->created_at, 'Y/m/d') }}</td>
+                                            {{-- <td>{{ date_format($package->created_at, 'Y/m/d') }}</td> --}}
                                             <td>
                                                 <a href="{{ url('admin/package/' . $package->id) }}"
                                                     class="btn btn-sm btn-info">view plans</a>
                                                 <form action="{{ route('admin.packages.delete') }}"
-                                                    style="display: inline;" method="POST">
+                                                    style="display: inline;" method="POST" onsubmit="return confirm('Do you want to delete?')">
                                                     @csrf
                                                     <input type="hidden" name="package_id" value="{{ $package->id }}">
                                                     <button type="submit" class=" btn btn-sm btn-danger">Delete</button>

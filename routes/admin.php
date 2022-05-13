@@ -19,6 +19,7 @@ Route::group(['middleware' => ['adminauth']], function () {
     Route::get('/profile', [AdminController::class, 'profile'])->name('admin.profile');
     Route::get('/users', [AdminController::class, 'users'])->name('admin.users');
     Route::get('/user/{id}', [AdminController::class, 'userInfo'])->name('admin.user');
+    Route::get('/user/plans/active', [AdminController::class, 'userPlans'])->name('admin.user.plans');
     Route::get('/withdrawals', [AdminController::class, 'withdrawals'])->name('admin.withdrawals');
     Route::post('/withdrawal/action', [AdminController::class, 'processWithdrawal'])->name('admin.withdrawal.action');
 

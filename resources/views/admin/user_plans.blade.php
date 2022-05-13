@@ -1,11 +1,11 @@
-@extends('layouts.user_dashboard')
+@extends('layouts.admin_dashboard')
 {{-- @section('title')
     Home
 @endsection --}}
 @section('content')
     <main>
         <div class="container-fluid px-4">
-            <h3 class="mt-4">Active subscriptions</h3>
+            <h4 class="mt-4">{{ $user->name }} active subscriptions</h4>
             {{-- <ol class="breadcrumb mb-4">
                 <li class="breadcrumb-item active">Dashboard Overview</li>
             </ol> --}}
@@ -15,7 +15,7 @@
                     <div class="card mb-4">
                         <div class="card-header">
                             {{-- <i class="fas fa-table me-1"></i> --}}
-                            <h6>Your subscriptions</h6>
+                            <h6>All subscriptions</h6>
                         </div>
                         <div class="card-body">
                             <table id="datatablesSimple">

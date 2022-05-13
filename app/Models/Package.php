@@ -10,7 +10,7 @@ class Package extends Model
     use HasFactory;
     protected $fillable = ['name', 'slug'];
 
-    public function plans()
+    public function subscriptions()
     {
         return $this->hasMany(PackagePlan::class, 'package_id', 'id');
     }
