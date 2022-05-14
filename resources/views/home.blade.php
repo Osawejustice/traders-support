@@ -223,7 +223,7 @@
                                     TRADING COMPETITION</h3>
                                 <ul>
                                     <li>Enter the competition with $10 fee</li>
-                                    <li>Win $250 - $2500 trading account</li>
+                                    <li>Win $250 - $2,500 trading account</li>
                                     <li>Ten (10) lucky winners will emerge monthly
                                     </li>
                                 </ul>
@@ -259,7 +259,7 @@
                                 </h3>
                                 <ul>
                                     <li>Enter the competition with $10 fee</li>
-                                    <li>Win $10000 - $100000 t trading account</li>
+                                    <li>Win $10,000 - $100,000 t trading account</li>
                                     <li>Ten (10) lucky winners will emerge monthly
                                     </li>
                                 </ul>

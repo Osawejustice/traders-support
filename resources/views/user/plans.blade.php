@@ -36,7 +36,7 @@
                                             <div class="card">
                                                 <div class="card-body">
                                                     <p>
-                                                        One time payment for a
+                                                        Payment for a
                                                         <strong>${{ number_format($subscription->target) }}</strong> account
                                                     </p>
                                                     <form action="/account/sub" method="POST">
