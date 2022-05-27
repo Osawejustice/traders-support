@@ -20,7 +20,7 @@
                                                 </li> --}}
 
 
-                                           <li> <a href="/about.html">About us </i></a>
+                                           <li> <a href="/">About us </i></a>
 
                                            </li>
                                            <li> <a href="#">Programs <i class="fa fa-angle-down"
@@ -33,8 +33,8 @@
                                                </ul>
 
                                            </li>
-                                           <li><a href="#">FAQ</a></li>
-                                           <li><a href="contact.html">Contact</a></li>
+                                           <li><a href="/">FAQ</a></li>
+                                           <li><a href="{{ url('contact') }}">Contact</a></li>
                                            <li>
                                                <a href="javascript:void(0)" class="mb-1">
                                                    <div id="google_translate_element"></div>

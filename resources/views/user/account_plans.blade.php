@@ -44,7 +44,7 @@
                                 <tbody>
                                     @foreach ($plans as $plan)
                                         <tr>
-                                            <td>{{ ucfirst($plan->package->name) }}</td>
+                                            <td>{{ $plan->package ? ucfirst($plan->package->name) : "Nil" }}</td>
                                             <td>${{ number_format($plan->target_amount) }}</td>
                                             <td>${{ number_format($plan->amount) }}</td>
                                             <td>{{ $plan->status }}</td>

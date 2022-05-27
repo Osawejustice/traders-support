@@ -8,10 +8,12 @@
                     </div>
                     <div class="footer-social-area" style="text-align: left">
                         <ul class="footer-social-list text-center list-unstyled" style="margin-left: 0; padding-left: 0">
-                            <li> <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
-                            <li> <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
-                            <li> <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a> </li>
-                            <li> <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>
+                            <li> <a href="https://www.facebook.com/profile.php?id=100077890754030&sk=about"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
+                            <li> <a href="https://t.me/TradersSupportFunds"><i class="fa fa-telegram" aria-hidden="true"></i></a> </li>
+                            <li> <a href="https://www.instagram.com/traderssupportfunds"><i class="fa fa-instagram" aria-hidden="true"></i></a> </li>
+                            <li> <a href="https://api.whatsapp.com/send?phone=971509504562&text=Hello%2C%20I%20want%20to%20make%20inquiries%20about%20Traders%27%20support%20funds."><i class="fa fa-whatsapp" aria-hidden="true"></i></a> </li>
+                            {{-- <li> <a href="https://discord.gg/WNCC8XbG"><i class="fa fa-discord-o" aria-hidden="true"></i></a> </li> --}}
+                            
                         </ul>
                     </div>
                     <div class="footer-mail parsley-validate">
@@ -34,11 +36,11 @@
                     </div>
                     <div class="footer-link">
                         <div class="link-left">
-                            <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>How it works?</a>
-                            <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Careers</a>
-                            <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Partners</a>
-                            <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Testimonials</a>
-                            <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>LeadersBoard</a>
+                            <a href="/"><i class="fa fa-angle-right" aria-hidden="true"></i>How it works?</a>
+                            <a href="/"><i class="fa fa-angle-right" aria-hidden="true"></i>Careers</a>
+                            <a href="/"><i class="fa fa-angle-right" aria-hidden="true"></i>Partners</a>
+                            <a href="/"><i class="fa fa-angle-right" aria-hidden="true"></i>Testimonials</a>
+                            <a href="/"><i class="fa fa-angle-right" aria-hidden="true"></i>LeadersBoard</a>
                         </div>
                         {{-- <div class="link-right"> <a href="#"><i class="fa fa-angle-right"
                                     aria-hidden="true"></i>Scaling Plan</a> <a href="#"><i class="fa fa-angle-right"
@@ -52,7 +54,7 @@
             <div class="col-lg-4 col-sm-6">
                 <div class="footer-widget">
                     <div class="footer-header">
-                        <h5>Trading</h5>
+                        <h5>Programs</h5>
                         <div class="unerline"> <span></span> <span></span> <span></span> </div>
                     </div>
                     <div class="footer-link">

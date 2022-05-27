@@ -38,6 +38,14 @@
                                 @enderror
                             </div>
                             <div class="mb-3">
+                                <label for="number" class="form-label">Phone number</label>
+                                <input id="phone" type="phone" class="form-control" placeholder="Enter your phone mumber"
+                                    name="phone" value="{{ old('phone') }}" />
+                                @error('phone')
+                                    <h6 style="color: tomato; margin-top: 8px;">{{ Str::replaceFirst('phone', 'phone number', $message)  }}</h6>
+                                @enderror
+                            </div>
+                            <div class="mb-3">
                                 <label for="username" class="form-label">Username</label>
                                 <input id="username" type="text" class="form-control" placeholder="Enter your username"
                                     name="username" value="{{ old('username') }}" />

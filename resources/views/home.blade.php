@@ -25,9 +25,10 @@
                             </h1>
                             <p data-animate="fadeInUp" data-delay=".4"> AS WE AWAIT YOU WITH
                                 PROPRIETARY FUNDS
-                                IN THE MARKET PLACE ...</p>
+                                IN THE MARKET PLACE.</p>
                             {{-- <a href="{{route('login')}}" class="btn waves-effect mr-2" data-animate="fadeInUp" data-delay=".6">SIGN IN</a> --}}
-                            <a href="{{route('register')}}" class="btn waves-effect" data-animate="fadeInUp" data-delay=".6">GET STARTED</a>
+                            <a href="{{ route('register') }}" class="btn waves-effect" data-animate="fadeInUp"
+                                data-delay=".6">GET STARTED</a>
                         </div>
                     </div>
                     <div class="col-lg-6 col-xl-6 offset-xl-1 col-md-6" style="padding-top: 100px">
@@ -213,12 +214,8 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="single--service-inner">
-                            {{-- <div class="single--service-icon"> <img src="img/icons/service-icon1.png" alt="">
-                                <div class="underline-wrap">
-                                    <div class="unerline"> <span></span> <span></span> <span></span> </div>
-                                </div>
-                            </div> --}}
-                            <div class="single-service-text">
+                            <img src="{{ asset('img/banner1.png') }}" alt="Banner image -xl">
+                            {{-- <div class="single-service-text">
                                 <h3  class="py-1 text-white">SYNTHETIC ( DERIV ) DEMO
                                     TRADING COMPETITION</h3>
                                 <ul>
@@ -238,21 +235,33 @@
                                 <h4 class="text-white"> $1,000 - $10,000</h4>
                                 <h4 class="text-white"> $2,500 - $25,000</h4>
                                 <h4 class="text-white"> $5,000 - $50,000</h4>
-                                {{-- <p>Learn about support & resistance,
-                                    risk management and more.
-                                    Graduate to the semi-professional
-                                    status (COMING SOON)
-                                </p> --}}
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="single--service-inner">
-                            {{-- <div class="single--service-icon"> <img src="img/icons/service-icon2.png" alt="">
-                                <div class="underline-wrap">
-                                    <div class="unerline"> <span></span> <span></span> <span></span> </div>
-                                </div>
-                            </div> --}}
+
+                            <div class="single-service-text">
+                                <h3 class="text-white">What is the Funded Trader Program</h3>
+                                <p>
+                                    A Funded Trader Program offers traders large capital to be able to have enough leverage
+                                    to trade with profits. Once this is achieved, these profits are split between yourself
+                                    and the Proprietary Firm.
+                                </p>
+                                <p>
+                                    Many people are trying to learn more about this field every day and it is not only about
+                                    knowing the trading basics but also using the tight tools and platforms to manage your
+                                    money and be successful in the industry.</p>
+                                <p>
+                                    Many people are becoming profitable, learning trading skills and strategies from many
+                                    online resources but they still lack the capital to make big profits. This is why Funded
+                                    Trader programs are here. Audacity Capital is one of the best forex funded programs
+                                    designed for profitable and talentd Forex traders.
+                                </p>
+                            </div>
+                        </div>
+                        {{-- <div class="single--service-inner">
+                            
                             <div class="single-service-text">
                                 <h3 class="text-white">FOREX DEMO
                                     TRADING COMPETITION
@@ -274,7 +283,7 @@
                                 <h4 class="text-white"> $950 - $200,000</h4>
                                 <h4 class="text-white"> $1,100 - $250,000</h4>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -303,11 +312,9 @@
                                 </div>
                             </div>
                             <div class="single-service-text">
-                                <h4>Forex Academy</h4>
-                                <p>Learn about support & resistance,
-                                    risk management and more.
-                                    Graduate to the semi-professional
-                                    status (COMING SOON)
+                                <h4>Global Trading Community</h4>
+                                <p>Join our global community of traders where you can join the conversation, share ideas on
+                                    markets and grow your own professional network
                                 </p>
                             </div>
                         </div>
@@ -320,9 +327,9 @@
                                 </div>
                             </div>
                             <div class="single-service-text">
-                                <h4>Pay Once</h4>
-                                <p>Our programs are available in a
-                                    one.</p>
+                                <h4>Profit Share.</h4>
+                                <p>As a funded trader, you will earn 50% of the profits you make, with capital increases
+                                    pre-defined target achievements.</p>
                             </div>
                         </div>
                     </div>
@@ -334,12 +341,9 @@
                                 </div>
                             </div>
                             <div class="single-service-text">
-                                <h4>We are always by your side</h4>
-                                <p>24/5 support is available to all our
-                                    community, day or night we are
-                                    there for you. Our interest co-align
-                                    with your success. We are always
-                                    there to assist when needed.</p>
+                                <h4>No Risk For You.</h4>
+                                <p>You never have to risk any of your own money and are not liable for any losses. Use our
+                                    money to make you money.</p>
                             </div>
                         </div>
                     </div>
@@ -351,10 +355,9 @@
                                 </div>
                             </div>
                             <div class="single-service-text">
-                                <h4>We are a Community</h4>
-                                <p>Talk actively with us, our community and our fans on discord. We provide talks
-                                    and information in real time to actively promote good behaviour in trading. join
-                                    our discord and see what all the fuss is about!
+                                <h4>Achievable Target.</h4>
+                                <p>There is no time limit on hitting the 10% target, so you don't feel pressured to take
+                                    unnecessary trades
                                 </p>
                             </div>
                         </div>
@@ -367,8 +370,9 @@
                                 </div>
                             </div>
                             <div class="single-service-text">
-                                <h4>Insurence Protection</h4>
-                                <p>There are many variations of Packages that we have</p>
+                                <h4>Multi Asset Class</h4>
+                                <p>You can trade in over 40 markets across three asset classes, FX, Commodities and Indices.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -380,8 +384,9 @@
                                 </div>
                             </div>
                             <div class="single-service-text">
-                                <h4>Cost & Tax Effecient</h4>
-                                <p>There are many variations of Cost & Tax Effecient</p>
+                                <h4> Morning Market Brief</h4>
+                                <p>Receive our morning market brief document each morning direct from our trading desk.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -389,7 +394,7 @@
             </div>
         </div>
     </section>
-    <section class="pt-140 crypto-patern home1-section-bg1">
+    <section class="pt-20 crypto-patern home1-section-bg1">
 
         <div class="container">
             <div class="row justify-content-center">
@@ -517,6 +522,54 @@
     </section> --}}
     <section class="pt-140 pb-80 crypto-patern">
         <div class="container">
+            {{-- <div class="row justify-content-center">
+                <div class="col-xl-12 col-lg-8">
+                    <div class="section-title text-center mb-30"> <img src="img/icons/balb.svg" alt=""
+                            class="svg">
+                        <h2>PROGRAM BENEFITS</h2>
+                        <h2>(Earn as a
+                            Professional
+                            Trader)</h2>
+                    </div>
+                </div>
+            </div> --}}
+            <div class="service-wrap">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="single--service-inner">
+                            <img src="{{ asset('img/banner2.png') }}" alt="Banner image two">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="single--service-inner">
+
+                            <div class="single-service-text">
+                                <h3 class="text-white">What we are looking for</h3>
+                                <p class="mb-4">
+                                    We are looking for traders with live experience managing risk and who have shown
+                                    profitability. Here are some requirements we are looking for when approving traders to
+                                    join our program.
+                                </p>
+                                <ul class="ml-0 pl-0">
+                                    <li class="mb-3">Can demonstrate at least 3 - 6 months trading a live
+                                        account.</li>
+                                    <li class="mb-3">Can demonstrate consistency when managing risk and
+                                        profitability during this timeframe.
+                                    </li>
+                                    <li>Can demonstrate consistency by following a trading plan or
+                                        strategy.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pt-20 pb-80 crypto-patern">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-8">
                     <div id="update-chart" style="height: 500px"></div>
@@ -525,13 +578,15 @@
                     <div class="trading--update-text">
                         <h2>Join our ever-growing family & Earn</h2>
                         <p>we have multiple programs to fit your expertise. Choose one of our programs and start
-                            trading, earn bonuses and profit-splits.</p><a href="#" class="btn waves-effect">Start
+                            trading, earn bonuses and profit-splits.</p><a href="{{ route('register') }}"
+                            class="btn waves-effect">Start
                             Now!</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
     {{-- <section class="pt-140 pb-140 crypto-patern">
         <div class="app--full-width">
             <div class="app-overlay-bg d-lg-block d-none" data-bg-img="img/mobile-bg.png"></div>

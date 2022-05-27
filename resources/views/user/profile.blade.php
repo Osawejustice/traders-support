@@ -33,6 +33,14 @@
                             <div class="item-profile">
                                 <p class="mb-0"
                                     style="color: #3f3f3f;font-size:14px;font-weight:bold;margin-bottom:0px;padding-bottom:0px;">
+                                    Phone number
+                                </p>
+                                <p class="mt-0">{{ $user->phone ?? 'Nil' }}</p>
+                            </div>
+
+                            <div class="item-profile">
+                                <p class="mb-0"
+                                    style="color: #3f3f3f;font-size:14px;font-weight:bold;margin-bottom:0px;padding-bottom:0px;">
                                     Email
                                 </p>
                                 <p class="mt-0">{{ $user->email }}</p>
@@ -87,6 +95,17 @@
                                         class="form-control" name="username">
                                     @error('username')
                                         <h6 style="color: tomato; margin-top: 8px;">{{ $message }}</h6>
+                                    @enderror
+                                </div>
+
+
+                                <div class="mb-3">
+                                    <label for="name">Phone number</label>
+                                    <input type="number" placeholder="Enter your phone number" value="{{ $user->phone }}"
+                                        class="form-control" name="phone" />
+                                    @error('phone')
+                                        <h6 style="color: tomato; margin-top: 8px;">
+                                            {{ Str::replaceFirst('phone', 'phone number', $message) }}</h6>
                                     @enderror
                                 </div>
 

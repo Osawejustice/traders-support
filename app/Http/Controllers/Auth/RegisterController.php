@@ -30,6 +30,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'username' => ['required', 'string', 'unique:users', 'alpha_dash', 'min:3', 'max:30'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'phone' => ['required', 'string', 'max:13', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
 
@@ -44,9 +45,10 @@ class RegisterController extends Controller
         User::create([
             'name'        => $data['name'],
             'username'    => $data['username'],
+            'phone'       => $data['phone'],
             'email'       => $data['email'],
             'referrer_id' => $referrer ? $referrer->id : null,
-            'password'    => Hash::make($data['password']),
+            'password'    => Hash::make($data['password'])
         ]);
         return redirect()->route('login')->with('login_success', 'Account has been created sucessfully, please login');
     }

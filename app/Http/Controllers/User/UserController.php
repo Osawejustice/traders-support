@@ -27,20 +27,28 @@ class UserController extends Controller
         $this->validate($request, [
             'name' => 'required|string|min:6',
             'username' => ['required', 'string', 'alpha_dash', 'min:3', 'max:30'],
+            'phone' => ['required', 'string', 'max:13'],
             'address' => 'required|min:8',
         ]);
 
         $user = Auth::user();
-        $data = $request->only(['name', 'username', 'address']);
+        $data = $request->only(['name', 'username', 'address', 'phone']);
         if ($user->username != $data['username']) {
             $findUser = User::whereUsername($data['username'])->first();
             if ($findUser) {
                 return back()->with('error', 'Username already taken');
             }
         }
+        if ($user->phone != $data['phone']) {
+            $findPhoneNumber = User::wherePhone($data['phone'])->first();
+            if ($findPhoneNumber) {
+                return back()->with('error', 'Phone number already taken');
+            }
+        }
         $result = User::where('id', $user->id)->update([
             'name' => $data['name'],
             'username' => $data['username'],
+            'phone' => $data['phone'],
             'wallet_address' => $data['address']
         ]);
 
